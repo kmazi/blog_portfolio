@@ -5,5 +5,6 @@ class PortfolioPageTest(SimpleTestCase):
   def test_home_url_works(self):
     self.client = Client()
     response = self.client.get('/')
-    self.assertContains(response, 'success', status_code=200)
-    self.assertTemplateUsed(response, 'index.html')
+    self.assertEqual(response.status_code, 200)
+    self.assertTemplateUsed(response, 'base.html')
+    self.assertTemplateUsed(response, 'portfolio/index.html')
