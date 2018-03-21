@@ -2,5 +2,5 @@ from django.views.generic import TemplateView
 
 # Create your views here.
 class HomeView(TemplateView):
-  template_name = 'portfolio/index.html'
+  template_name = 'portfolio/home.html'
   
