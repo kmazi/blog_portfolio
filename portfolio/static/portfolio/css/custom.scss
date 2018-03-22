@@ -1,1 +1,24 @@
 @import "customfoundation";
+
+.menu {
+  .menu-text {
+    border-style: solid;
+    border-color: #90a8ed;
+    border-width: thin;
+    color: #0b143c;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  li {
+    background-color: #dde5f5;
+    a:hover {
+      $border-color: #90a8ed;;
+      border-right-style: solid;
+      border-right-color: $border-color;
+      border-right-width: thin;
+      border-left-style: solid;
+      border-left-color: $border-color;
+      border-left-width: thin;
+
+    }
+  }
+}
