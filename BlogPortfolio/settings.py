@@ -139,6 +139,11 @@ STATICFILES_FINDERS = [
     'sass_processor.finders.CssFinder',
 ]
 
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "components/bower_components/jquery/dist"),
+    os.path.join(BASE_DIR, "components/bower_components/foundation-sites/dist/js"),
+]
+
 BOWER_COMPONENTS_ROOT = os.path.join(BASE_DIR, 'components')
 
 BOWER_INSTALLED_APPS = [

@@ -18,7 +18,12 @@
       border-left-style: solid;
       border-left-color: $border-color;
       border-left-width: thin;
-
     }
   }
 }
+div.callout {
+  background-image: url('/static/portfolio/images/software-developer.jpg');
+  background-size: cover;
+}
+
+
