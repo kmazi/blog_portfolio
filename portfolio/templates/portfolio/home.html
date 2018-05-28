@@ -1,38 +1,58 @@
 {% extends "base.html" %}
 
 {% block body %}
+{% load static %}
 <div class="callout primary">
-  <div class="row column text-right">
-    <h1>SOFTWARE DEVELOPER</h1>
-    <p class="lead">Looking to <strong>colaborate</strong> with you on your
-    project today</p>
-    <a href="#" class="button alert large">Get in touch now!</a>
-    <a href="#" class="button warning large hollow">Look at other projects!</a>
+  <div class="shade-layer">
+    <div class="row column text-center">
+        <h1>SOFTWARE DEVELOPER</h1>
+        <p class="lead">Looking to <strong>colaborate</strong> with you in your
+        project today</p>
+        <a href="#" class="button alert large">Get in touch now!</a>
+        <a href="#" class="button warning large hollow">Look at other projects!</a>    
+      </div>
   </div>
 </div>
 
 <div class="row">
+  <h2>Call for Collaboration</h2>
+  <hr>
   <div class="medium-6 columns medium-push-6">
-    <img class="thumbnail" src="http://placehold.it/750x350">
+    <img class="" alt="software development team" src="{% static 'portfolio/images/software-team.png' %}">
   </div>
   <div class="medium-6 columns medium-pull-6">
-    <h2>Our Agency, our selves.</h2>
-    <p>Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna diam porttitor mauris, quis sollicitudin sapien justo in libero. Vestibulum mollis mauris enim. Morbi euismod magna ac lorem rutrum elementum. Donec viverra auctor.</p>
+    <p>In today's fast paced world of technological advancement, there exist various exciting options to carry out
+      software projects. You can <a href="#">contact</a> me if you need to expand your team of developers working on
+      a <strong>python</strong>, <strong>javascript</strong> or <strong>c#</strong> project or to pull out your
+      project from concept to production.
+
+    </p>
   </div>
 </div>
 
 <div class="row">
   <div class="medium-4 columns">
-    <h3>Photoshop</h3>
-    <p>Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna.</p>
+    <img class="programming-image" src="{% static 'portfolio/images/python-logo.png' %}" alt="python developer">
+    <p>
+      Python is a vast programming language that lets you work quickly and integrate systems more effectively . I'm looking forward 
+      to executing your project from scratch or collaborating with you on your data analysis project ( <strong>Pandas and Numpy</strong> ), web project 
+      ( <strong>Flask and Django web framework</strong> ) 
+    </p>
   </div>
   <div class="medium-4 columns">
-    <h3>Javascript</h3>
-    <p>Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna.</p>
+      <img class="programming-image" src="{% static 'portfolio/images/javascript-logo.png' %}" alt="Jvascript developer">
+    <p>
+      Javascript is the programming language for the web; it can be used for both frontend and backend web development.
+      Get in touch with me to collaborate with your on your <strong>Nodejs</strong>, <strong>Reactjs</strong>, <strong>Angularjs</strong> applications.
+    </p>
   </div>
   <div class="medium-4 columns">
-    <h3>Marketing</h3>
-    <p>Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna.</p>
+      <img class="programming-image" src="{% static 'portfolio/images/c#-logo.png' %}" alt="C# developer">
+    <p>
+      C# is a multi-paradigm programming language that is vasatile and super fast. I can collaborate with you 
+      on your project in the various .Net framework platform: <strong>WPF</strong>, <strong>ASP.NET webform and MVC</strong> 
+      <strong>ASP.NET core MVC</strong>.
+    </p>
   </div>
 </div>
 
@@ -47,8 +67,6 @@
     <li><a href="#"><div class="stat">18</div><span>Logos</span></a></li>
   </ul>
 </div>
-
-<hr>
 
 <div class="row column">
   <h3>Our Recent Work</h3>
@@ -92,6 +110,6 @@
     <img class="thumbnail" src="http://placehold.it/550x550">
   </div>
 </div>
-{% endblock%}
+{% endblock %}
 
     

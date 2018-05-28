@@ -11,19 +11,32 @@
   li {
     background-color: #dde5f5;
     a:hover {
-      $border-color: #90a8ed;;
-      border-right-style: solid;
-      border-right-color: $border-color;
-      border-right-width: thin;
-      border-left-style: solid;
-      border-left-color: $border-color;
-      border-left-width: thin;
+      background-color: white;
+      color: #1779ba;
     }
   }
+}
+.programming-image{
+  width: 250px;
+  height: 250px;
 }
 div.callout {
   background-image: url('/static/portfolio/images/software-developer.jpg');
   background-size: cover;
 }
-
-
+.shade-layer{
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 7em 5em;
+}
+@media screen and (max-width: 600px) {
+  div.top-bar-left .menu {
+    display: none;
+  }
+  div.callout h1 {
+    font-size: 30px;
+  }
+  div.callout .shade-layer {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}

@@ -142,6 +142,7 @@ STATICFILES_FINDERS = [
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "components/bower_components/jquery/dist"),
     os.path.join(BASE_DIR, "components/bower_components/foundation-sites/dist/js"),
+    os.path.join(BASE_DIR, "node_modules")
 ]
 
 BOWER_COMPONENTS_ROOT = os.path.join(BASE_DIR, 'components')

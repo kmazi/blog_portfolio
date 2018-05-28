@@ -107,3 +107,6 @@ db.sqlite3
 
 components
 static/portfolio/css
+
+/node_modules
+package*.json
