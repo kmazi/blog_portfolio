@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block body %}
+{% load static %}
+<div class="callout primary">
+  <div class="shade-layer">
+    <div class="row column text-center">
+        <h1>NEED A SOFTWARE ENGINEER?</h1>
+        <p class="lead">Looking to <strong>colaborate</strong> with you in your
+        project today</p>
+        <a href="/contact" class="button alert large">Get in touch now!</a>
+        <a href="#projects" data-smooth-scroll class="button warning large hollow">Look at other projects!</a>    
+      </div>
+  </div>
+</div>
+
+<div class="row">
+  <h2>Call for Collaboration</h2>
+  <hr>
+  <div class="medium-6 columns medium-push-6">
+    <img class="" alt="software development team" src="{% static 'portfolio/images/software-team.png' %}">
+  </div>
+  <div class="medium-6 columns medium-pull-6 ">
+    <p>In today's fast paced world of technological advancement, there exist various exciting options to carry out
+      software projects. You can <a href="/contact">contact</a> me if you need to expand your team of developers working on
+      a <strong>python</strong>, <strong>javascript</strong> or <strong>c#</strong> project or to pull out your
+      project from concept to production.
+
+    </p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="medium-4 columns">
+    <img class="programming-image" src="{% static 'portfolio/images/python-logo.png' %}" alt="python developer">
+    <p class="">
+      Python is a vast programming language that lets you work quickly and integrate systems more effectively . I'm looking forward 
+      to executing your project from scratch or collaborating with you on your data analysis project ( <strong>Pandas and Numpy</strong> ), web project 
+      ( <strong>Flask and Django web framework</strong> ) 
+    </p>
+  </div>
+  <div class="medium-4 columns">
+      <img class="programming-image" src="{% static 'portfolio/images/javascript-logo.png' %}" alt="Jvascript developer">
+    <p class="">
+      Javascript is the programming language for the web; it can be used for both frontend and backend web development.
+      Get in touch with me to collaborate with your on your <strong>Nodejs</strong>, <strong>Reactjs</strong>, <strong>Angularjs</strong> applications.
+    </p>
+  </div>
+  <div class="medium-4 columns">
+      <img class="programming-image" src="{% static 'portfolio/images/csharp-logo.png' %}" alt="C# developer">
+    <p class="">
+      C# is a multi-paradigm programming language that is vasatile and super fast. I can collaborate with you 
+      on your project in the various .Net framework platform: <strong>WPF</strong>, <strong>ASP.NET webform and MVC</strong> 
+      <strong>ASP.NET core MVC</strong>.
+    </p>
+  </div>
+</div>
+
+{% endblock %}
+
+    

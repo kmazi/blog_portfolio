@@ -80,7 +80,7 @@ celerybeat-schedule
 *.sage.py
 
 # dotenv
-.env
+.envrc
 
 # virtualenv
 .venv
@@ -99,3 +99,14 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+#vscode stuff
+.vscode
+.DS_Store
+db.sqlite3
+
+components
+static/portfolio/css
+
+/node_modules
+package*.json
