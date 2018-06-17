@@ -1,6 +1,7 @@
 @import "customsettings";
-@import "~foundation-sites/scss/foundation";
-// @import "~motion-ui/src/motion-ui";
+@import "../../../../node_modules/foundation-sites/scss/foundation";
+
+@include foundation-everything(false);
 
 @include foundation-everything(false);
 // @include motion-ui-transitions;
