@@ -1,4 +1,7 @@
-@import "customfoundation";
+@import "customsettings";
+@import "../../../../node_modules/foundation-sites/scss/foundation";
+
+@include foundation-everything(false);
 
 .menu {
   .menu-text {
@@ -35,7 +38,7 @@ div.callout {
     display: none;
   }
   div.callout h1 {
-    font-size: 30px;
+    font-size: 27px;
   }
   div.callout .shade-layer {
     padding-left: 1em;

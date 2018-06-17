@@ -6,7 +6,7 @@ module.exports = {
   entry: '../../portfolio/static/portfolio/js/entry',
 
   output: {
-      path: path.resolve('./static/bundles/'),
+      path: path.resolve('./assets/bundles/'),
       filename: "[name]-[hash].js"
   },
 

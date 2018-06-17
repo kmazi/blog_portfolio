@@ -1,7 +1,8 @@
-var path = require("path")
-var webpack = require('webpack')
-var BundleTracker = require('webpack-bundle-tracker')
-var config = require('./webpack.config.base.js')
+var path = require("path");
+var webpack = require('webpack');
+var BundleTracker = require('webpack-bundle-tracker');
+var config = require('./webpack.config.base.js');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 
 // Use webpack dev server
@@ -10,12 +11,18 @@ config.entry = [
   '../../portfolio/static/portfolio/js/entry'
 ]
 
+config.mode = "development"
+
 // override django's STATIC_URL for webpack bundles
-config.output.publicPath = 'http://localhost:3000/static/bundles/'
+config.output.publicPath = 'http://localhost:3000/assets/bundles/'
 
 // Add HotModuleReplacementPlugin and BundleTracker plugins
 config.plugins = config.plugins.concat([
   new webpack.HotModuleReplacementPlugin(),
+  new webpack.ProvidePlugin({
+    $: 'jquery',
+    jQuery: 'jquery'
+  }),  
   // new webpack.NoErrorsPlugin(),
   new BundleTracker({filename: './webpack-stats.json'}),
   new webpack.SourceMapDevToolPlugin({filename: '[file].map'}),

@@ -108,4 +108,8 @@ db.sqlite3
 components
 static/portfolio/css
 
-/node_modules
+node_modules/
+assets
+package-lock.json
+webpack-stats.json
+yarn.lock

@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'sass_processor',
+    'webpack_loader',
 ]
 
 MIDDLEWARE = [
@@ -136,23 +136,27 @@ STATIC_URL = '/static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-SASS_PROCESSOR_INCLUDE_DIRS = [
-    os.path.join(BASE_DIR, 'components/bower_components/foundation-sites/scss'),
-]
+# SASS_PROCESSOR_INCLUDE_DIRS = [
+#     os.path.join(BASE_DIR, 'components/bower_components/foundation-sites/scss'),
+# ]
 
-SASS_PROCESSOR_ROOT = STATIC_ROOT
+# SASS_PROCESSOR_ROOT = STATIC_ROOT
 
 STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-    'sass_processor.finders.CssFinder',
 ]
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "components/bower_components/jquery/dist"),
-    os.path.join(BASE_DIR, "components/bower_components/foundation-sites/dist/js"),
-    os.path.join(BASE_DIR, "components/bower_components/foundation-sites/js"),
-    os.path.join(BASE_DIR, "node_modules")
+    os.path.join(BASE_DIR, "node_modules"),
+    os.path.join(BASE_DIR, "assets")
 ]
+
+WEBPACK_LOADER = {
+    'DEFAULT': {
+        'BUNDLE_DIR_NAME': 'bundles/',
+        'STATS_FILE': os.path.join(BASE_DIR, 'webpack-stats.json'),
+    }
+}
 
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
