@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'djangobower',
     'sass_processor',
 ]
 
@@ -146,7 +145,6 @@ SASS_PROCESSOR_ROOT = STATIC_ROOT
 STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-    'djangobower.finders.BowerFinder',
     'sass_processor.finders.CssFinder',
 ]
 
@@ -158,9 +156,3 @@ STATICFILES_DIRS = [
 ]
 
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
-
-BOWER_COMPONENTS_ROOT = os.path.join(BASE_DIR, 'components')
-
-BOWER_INSTALLED_APPS = [
-    'foundation-sites',
-]
