@@ -1,5 +1,5 @@
 @import "customsettings";
-@import "../../../../node_modules/foundation-sites/scss/foundation";
+@import "~foundation-sites/scss/foundation";
 
 @include foundation-everything(false);
 
@@ -85,7 +85,7 @@ div#call-out2 {
                     center / cover;
 }
 .shade-layer{
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 @media screen and (max-width: 600px) {
   div.top-bar-left .menu {
