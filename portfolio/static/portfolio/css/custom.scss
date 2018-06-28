@@ -1,5 +1,5 @@
 @import "customsettings";
-@import "../../../../node_modules/foundation-sites/scss/foundation";
+@import "~foundation-sites/scss/foundation";
 
 @include foundation-everything(false);
 
@@ -29,7 +29,6 @@ div.callout {
 }
 .shade-layer{
   background-color: rgba(0, 0, 0, 0.4);
-  padding: 7em 5em;
 }
 
 

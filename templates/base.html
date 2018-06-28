@@ -6,31 +6,35 @@
     <title>Mazimia | Welcome</title>
     {% load render_bundle from webpack_loader %}
     {% load static %}
-    <link href="{% static 'portfolio/css/custom.css' %}" rel="stylesheet" type="text/css" />
+    <!-- <link href="{% static 'portfolio/css/custom.css' %}" rel="stylesheet" type="text/css" /> -->
   </head>
   <body>
     
     <!-- Start Top Bar -->
-  <div id="header" class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="medium">
+    <div id="header" class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="medium">
       <button class="menu-icon" type="button" data-toggle="responsive-menu"></button>
       <div class="title-bar-title">Mazimia</div>
     </div>
     
-    <div class="top-bar" id="responsive-menu" data-margin-top="0">
-      <div class="top-bar-left">
-        <ul class="menu">
-            <li class=""><a href="/">Mazimia</a></li>
-        </ul>
-      </div>
-      <div class="top-bar-right">
-        <ul class="menu">
-          <li class="is-active"><a href="/">Home</a></li>
-          <li><a href="/blog">Blog</a></li>
-          <li><a href="/contact">Contact</a></li>
-          <li><a href="/about">About</a></li>
-        </ul>
-      </div>
-    </div>
+    <!-- <div data-sticky-container>
+      <div data-sticky data-options="marginTop:0;" style="width:100%"> -->
+        <div class="top-bar" id="responsive-menu" data-margin-top="0">
+          <div class="top-bar-left">
+            <ul class="menu">
+                <li class=""><a href="/">Mazimia</a></li>
+            </ul>
+          </div>
+          <div class="top-bar-right">
+            <ul id="header-menu" class="menu">
+              <li class="is-active"><a href="/">Home</a></li>
+              <li><a href="/blog">Blog</a></li>
+              <li><a href="/contact">Contact</a></li>
+              <li><a href="/about">About</a></li>
+            </ul>
+          </div>
+        </div>
+      <!-- </div>
+    </div> -->
     
     <!-- End Top Bar -->
     {% block body %}
