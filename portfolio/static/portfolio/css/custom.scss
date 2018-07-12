@@ -1,7 +1,6 @@
 @import "customsettings";
 @import "~foundation-sites/scss/foundation";
-
-@include foundation-everything(false);
+// @import "~motion-ui/src/motion-ui";
 
 @include foundation-everything(false);
 // @include motion-ui-transitions;
@@ -85,7 +84,7 @@ div#call-out2 {
                     center / cover;
 }
 .shade-layer{
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 @media screen and (max-width: 600px) {
   div.top-bar-left .menu {
