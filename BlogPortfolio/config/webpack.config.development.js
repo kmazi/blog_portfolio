@@ -35,6 +35,10 @@ config.module.rules.push(
   //Probably a good idea to pick one
   //vanilla CSS
   {test: /\.css$/, loader: "style-loader!css-loader?root=."},
+  {test: /\.(svg|gif|png|eot|woff|ttf)$/,
+  loaders: [
+    'url-loader'
+  ]},
   //sass
   {
     test: /\.scss$/,
