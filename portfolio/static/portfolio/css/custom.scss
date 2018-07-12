@@ -64,12 +64,26 @@ html, body {
   width: 200px;
   height: 200px;
 }
-.callout.primary p{
-  font-family: 'news_cycleregular';
+img.card-image{
+  height: 230px;
+}
+#project .medium-12{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+p{
+  font-family: news_cycleregular;
+  font-size: 17px;
+}
+em{
+  font-family: new_cyclebold;
   font-size: 18px;
 }
-.callout.primary h1{
+h1, h2, h3, h4{
   font-family: 'concert_oneregular';
+}
+.column.medium-4{
+  padding: 2px 5px;
 }
 div#call-out0 {
   background: url('/static/portfolio/images/software-developer.jpg')

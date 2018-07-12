@@ -7,7 +7,7 @@ import "../css/custom.scss";
 $(document).foundation();
 $('#test-slick').slick({
   infinity: true,
-  dots: true,
+  dots: false,
   speed: 900,
   autoplay: true,
 });
