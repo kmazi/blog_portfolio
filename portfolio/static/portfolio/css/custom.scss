@@ -1,5 +1,45 @@
-@import "customfoundation";
+@import "customsettings";
+@import "~foundation-sites/scss/foundation";
+// @import "~motion-ui/src/motion-ui";
 
+@include foundation-everything(false);
+// @include motion-ui-transitions;
+// @include motion-ui-animations;
+@font-face {
+  font-family: 'veteran_typewriterregular';
+  src: url('/static/portfolio/fonts/veteran_typewriter-webfont.woff2') format('woff2'),
+       url('/static/portfolio/fonts/veteran_typewriter-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'news_cycleregular';
+  src: url('/static/portfolio/fonts/newscycle-regular-webfont.woff2') format('woff2'),
+       url('/static/portfolio/fonts/newscycle-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'news_cyclebold';
+  src: url('/static/portfolio/fonts/newscycle-bold-webfont.woff2') format('woff2'),
+       url('/static/portfolio/fonts/newscycle-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'concert_oneregular';
+  src: url('/static/portfolio/fonts/concertone-regular-webfont.woff2') format('woff2'),
+       url('/static/portfolio/fonts/concertone-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+.row.column > strong{
+  font-family: 'veteran_typewriterregular';
+}
 .menu {
   .menu-text {
     border-style: solid;
@@ -8,8 +48,12 @@
     color: #0b143c;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
+  .menu-logo{
+    font-family: concert_oneregular
+  }
   li {
-    background-color: #dde5f5;
+    background: #dde5f5;
+    font-family: 'veteran_typewriterregular';
     a:hover {
       background-color: white;
       color: #1779ba;
@@ -17,25 +61,51 @@
   }
 }
 .programming-image{
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
 }
-div.callout {
-  background-image: url('/static/portfolio/images/software-developer.jpg');
-  background-size: cover;
+img.card-image{
+  height: 230px;
+}
+#project .medium-12{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+p{
+  font-family: news_cycleregular;
+  font-size: 17px;
+}
+em{
+  font-family: new_cyclebold;
+  font-size: 18px;
+}
+h1, h2, h3, h4{
+  font-family: 'concert_oneregular';
+}
+.column.medium-4{
+  padding: 2px 5px;
+}
+div#call-out0 {
+  background: url('/static/portfolio/images/software-developer.jpg')
+              center / cover;
+}
+div#call-out1 {
+  background: url('/static/portfolio/images/timely-project-execution.jpg')
+                    center / cover;
+}
+div#call-out2 {
+  background: url('/static/portfolio/images/need-a-mentor.png')
+                    center / cover;
 }
 .shade-layer{
-  background-color: rgba(0, 0, 0, 0.4);
-  padding: 7em 5em;
+  background-color: rgba(0, 0, 0, 0.5);
 }
-
-
 @media screen and (max-width: 600px) {
   div.top-bar-left .menu {
     display: none;
   }
   div.callout h1 {
-    font-size: 30px;
+    font-size: 27px;
   }
   div.callout .shade-layer {
     padding-left: 1em;

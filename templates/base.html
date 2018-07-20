@@ -4,32 +4,35 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mazimia | Welcome</title>
-    {% load sass_tags %}
-    <link href="{% sass_src 'portfolio/css/custom.scss' %}" rel="stylesheet" type="text/css" />
-  </head>
+    {% load render_bundle from webpack_loader %}
+    {% load static %}
   <body>
     
     <!-- Start Top Bar -->
-  <div id="header" class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="medium">
+    <div id="header" class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="medium">
       <button class="menu-icon" type="button" data-toggle="responsive-menu"></button>
       <div class="title-bar-title">Mazimia</div>
     </div>
     
-    <div class="top-bar" id="responsive-menu" data-margin-top="0">
-      <div class="top-bar-left">
-        <ul class="menu">
-            <li class=""><a href="/">Mazimia</a></li>
-        </ul>
-      </div>
-      <div class="top-bar-right">
-        <ul class="menu">
-          <li class="is-active"><a href="/">Home</a></li>
-          <li><a href="/blog">Blog</a></li>
-          <li><a href="/contact">Contact</a></li>
-          <li><a href="/about">About</a></li>
-        </ul>
-      </div>
-    </div>
+    <!-- <div data-sticky-container>
+      <div data-sticky data-options="marginTop:0;" style="width:100%"> -->
+        <div class="top-bar" id="responsive-menu" data-margin-top="0">
+          <div class="top-bar-left">
+            <ul class="menu">
+                <li class="menu-logo"><a href="/">Mazimia</a></li>
+            </ul>
+          </div>
+          <div class="top-bar-right">
+            <ul id="header-menu" class="menu">
+              <li class="is-active"><a href="/">Home</a></li>
+              <li><a href="/blog">Blog</a></li>
+              <li><a href="/contact">Contact</a></li>
+              <li><a href="/about">About</a></li>
+            </ul>
+          </div>
+        </div>
+      <!-- </div>
+    </div> -->
     
     <!-- End Top Bar -->
     {% block body %}
@@ -40,18 +43,6 @@
     <div class="row column">
       <strong>Mazimia &copy; 2018</strong>
     </div>
-    {% load static %}
-    <script src="{% static 'jquery.js' %}"></script>
-    <script src="{% static 'foundation.js' %}"></script>
-    <script src="{% static 'foundation.util.motion.js' %}"></script>
-    <script src="{% static 'portfolio/js/carousel.js' %}"></script>
-    <script>
-      $(document).foundation();
-      var viewportHeight = window.innerHeight;
-      var headerHeight = $('#header').height();
-      var imageHeight = viewportHeight - headerHeight - 26;
-      $('.callout.primary').height(imageHeight);
-      $('.shade-layer').height(imageHeight - 224);
-    </script>
+    {% render_bundle 'main' %}
   </body>
 </html>
